@@ -1,7 +1,8 @@
 import axios from 'axios';
 
+
 const api = axios.create({
-  baseURL: "http://localhost:4000/api",
+  baseURL: process.env.BASE_API ?? "http://localhost:5000/api",
 });
 
 export const fetchRecipes = (filters: ({
